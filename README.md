@@ -3,7 +3,7 @@ Very basic hit-count-concurrency cache for mongoose
 
 # Usage
 
-`
+```
 var cacheFactory = require('./cache/cache-factory');
 var HashTableStrategy = require('./cache/hash-table-strategy');
 
@@ -22,4 +22,4 @@ schema.statics.fetchAll = cache.wrap(function fetchAll(){
         return yield self.find().lean().exec();
     });
 }, new HashTableStrategy());
-`
+```
